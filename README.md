@@ -1,3 +1,9 @@
+NOTE:  THIS LAB IS NOT YET COMPLETE.   PLEASE COME BACK LATER...
+================================================================
+
+
+
+
 Goals
 =====
 
