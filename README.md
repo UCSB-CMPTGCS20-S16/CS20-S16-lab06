@@ -31,8 +31,6 @@ In particular, you'll be able to:
 
 This will also provide additional practice with the concepts of "index" vs. "value" when dealing with lists. 
 
-Pair Programming is OPTIONAL for this lab.
-
 What you'll be doing
 --------------------
 
@@ -42,8 +40,7 @@ You'll need to come up with your own tests as well.
 
 **For students in CCS CS 20**: You will do this lab on CSIL. Instructions for connecting to CSIL can be found in Steps 0-2 of [lab02](https://github.com/UCSB-CMPTGCS20-S16/CS20-S16-lab02/blob/master/README.md).
 
-
-@@@@@@@@@@@@@ START EDITING AGAIN FROM HERE @@@@@
+Pair Programming is OPTIONAL for this lab.
 
 Programming, Step-by-Step
 =========================
@@ -66,64 +63,62 @@ YOU MUST DO THIS STEP EVEN IF YOU ARE PROGRAMMING SOLO so that we have a record 
 
 A link to that forum is here:
 
+@@@@@@@@@@@@@@@@@@ UPDATE THIS LINK @@@@@@@@@@@@@@@@@@@@@@
 <https://gauchospace.ucsb.edu/courses/mod/forum/view.php?id=166697>
 
 Here's what should be in your post:
 
-(1) In the title, names of both pair partners, or if you are programming solo, just your own name and the word "solo" in parens, like this:
+1. In the title, names of both pair partners, or if you are programming solo, just your own name and the word "solo" in parens, like this:
 
-`Pat Isla and Chris Vista`
+    `Pat Isla and Chris Vista`
 
-or
+    or
 
-`Joe Gaucho (solo)`
+    `Joe Gaucho (solo)`
 
-(2) In the body write the answers to these questions:
+2. In the body write the answers to these questions:
 
-(a) your CSIL username (or both CSIL usernames if in a pair)
+    1. your CSIL username (or both CSIL usernames if in a pair)
 
-(b) For PAIRS ONLY: What are two times you and your partner can meet at the CSIL lab this coming week for an hour each, in case you don't finish the lab today during lab? List those times here. Note that if your schedules are COMPLETELY incompatible, then you should ask the TA to reassign you now, before you even get started working.
+    2. For PAIRS ONLY: What are two times you and your partner can meet at the CSIL lab this coming week for an hour each, in case you don't finish the lab today during lab? List those times here. Note that if your schedules are COMPLETELY incompatible, then you should ask the TA to reassign you now, before you even get started working.
 
-(c) For PAIRS ONLY: Did you and your pair partner exchange some kind of contact information (e.g. email, cell numbers, etc.). Note: the right answer should be YES, because you should do that NOW. :-)
+    3. For PAIRS ONLY: Did you and your pair partner exchange some kind of contact information (e.g. email, cell numbers, etc.). Note: the right answer should be YES, because you should do that NOW. :-)
 
 Only one partner needs to record this on Gauchospace on behalf of a pair. No trios for this assignment!
 
-AND: NO PAIRS UNLESS BOTH OF YOU ARE PRESENT. TAs may do some spot checking of this.
+AND: NO PAIRS UNLESS BOTH OF YOU ARE PRESENT.
 
 ### Step 0b: Create a directory for lab06, and start lab06Funcs.py and lab06Tests.py in it
 
-Create a ~/cs8/lab06 directory, and start a new file in it called lab06Funcs.py, using either emacs or idle3 as your editor.
+Create a ~/cs20/lab06 directory, and start a new file in it called lab06Funcs.py, using either emacs or idle3 as your editor.
 
 NOTE WELL:
 
 -   You may use emacs no matter how you connect.
 -   If you want to use IDLE, then you either need
-    -   On Windows: PuTTY + XMing
+    -   On Windows: MobaXTerm, or PuTTY + XMing
     -   On Mac: ssh -X + XQuartz
     -   On Linux: you are probably good to go with just ssh -X
 
 Once you've opened that file, add a comment to the top of your file like this one (substituting your own name and the current date in the proper spot):
 
-    # lab06Funcs.py  by Agnes Nitt and Jason Ogg for CS8 lab06,  11/13/2013
+    # lab06Funcs.py  by Agnes Nitt and Jason Ogg for CS20 lab06,  11/13/2013
     # Writing to files in Python
 
 Then, save it under the name lab06Funcs.py
 
 Also create a separate file called lab06Tests.py
 
-    # lab06Tests.py  by Agnes Nitt and Jason Ogg for CS8 lab06,  11/13/2013
+    # lab06Tests.py  by Agnes Nitt and Jason Ogg for CS20 lab06,  11/13/2013
     # Tests for lab06Funcs.py 
 
 and save it under the name lab06Tests.py
 
 ### Step 0c: Copying some files into your lab06 directory
 
-The next step depends on whether you are working on CSIL, or your own machine, although for this lab I recommend you work on CSIL
+The next step depends on whether you are working on CSIL, or your own machine, although, again, for this lab it is highly recommended that you work on CSIL. Even if you are working on your own machine, it will be better if you use your machine to connect to CSIL and work there.
 
--   Even if you are working on your own machine, it will be better if you use your machine to connect to CSIL and work there.
--   See the instructions on the main page of the wiki about how to connect to CSIL in various ways, from Windows, Mac and Linux.
-
-You are going to copy some files from my directory ~pconrad/public\_html/cs8/14S/labs/lab06/code into your lab06 directory.
+You are going to copy some files from my directory *~pconrad/public\_html/cs8/14S/labs/lab06/code* into your lab06 directory.
 
 ### On CSIL
 
@@ -135,11 +130,11 @@ Note that the \* means "copy everything that matches" from this directory.
 
 ### If you are using scp
 
-If you are using scp at the command line, use this command. Note the backslash in front of the \*, which is necessary to make sure the \* is interpreted on the remote machine, not the local machine.
+SCP stands for Secure Copy, and it is how you will copy files if you are working on your own machine. So, if you are using scp at the command line, use this command. Note the backslash in front of the \*, which is necessary to make sure the \* is interpreted on the remote machine, not the local machine.
 
     scp yourusername@csil.cs.ucsb.edu:/cs/faculty/pconrad/public_html/cs8/14S/labs/lab06/code/\* ~/cs8/lab06
 
-If using a GUI for scp (e.g. WinSCP, Fetch, Filezilla), then you need to connect to csil.cs.ucsb.edu, and navigate in the "remote" window to /cs/faculty/pconrad/public\_html/cs8/14S/labs/lab06/code and copy everything from there into your lab06 directory by dragging.
+If using a GUI for scp (e.g. WinSCP, Fetch, Filezilla), then you need to connect to csil.cs.ucsb.edu, and navigate in the "remote" window to */cs/faculty/pconrad/public\_html/cs8/14S/labs/lab06/code* and copy everything from there into your lab06 directory by dragging.
 
 You can also go the web page <http://www.cs.ucsb.edu/~pconrad/cs8/14S/labs/lab06/code> and do a "save as" on each individual file, but that is sort of tedious.
 
@@ -148,11 +143,13 @@ Step 1: Learning how to make simple web pages by hand
 
 In this step, we'll learn how to make a simple web page.
 
-(You'll eventually need to repeat step 1 for both (or all three) pair partners—so that each of you has a web page.)
+(You'll eventually need to repeat step 1 for both pair partners so that each of you has a web page.)
 
-The first web page we will create will be at the following URL (except it will have your username in place of the words yourusername.)
+The first web page we will create will be at the following URL (except it will have your username in place of the words "yourusername".)
 
 So the first thing we need to do is create the folder that corresponds to this URL.
+
+@@@@@@@@@@@@ CONTINUE EDITING HERE @@@@@@@@@@@@@
 
 <http://www.cs.ucsb.edu/~yourusername/cs8/lab06/sample.html>
 
