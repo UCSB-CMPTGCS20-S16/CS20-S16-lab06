@@ -1138,7 +1138,7 @@ Each line contains these values, separated by commas:
 
 Your job: write a program that reads all the data from this file, and formats it as a web page, so that it looks like this:
 
-![](F13_Labs_lab06_sbweather_as_a_table.png "F13_Labs_lab06_sbweather_as_a_table.png")
+![F13_Labs_lab06_sbweather_as_a_table.png](/images/F13_Labs_lab06_sbweather_as_a_table.png)
 
 You can use the makeWebPageExample.py as a starting point—but be sure to make appropriate changes:
 
