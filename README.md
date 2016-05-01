@@ -194,7 +194,7 @@ Note that I made this an image—that means you have to type it, you can't just 
 
 Typing it will help you to learn the HTML code—as you type, you'll be learning the syntax (i.e. the rules of HTML coding.)
 
-![](F13_Labs_lab06_SimpleWebPage.png "F13_Labs_lab06_SimpleWebPage.png")
+![F13_Labs_lab06_SimpleWebPage.png](/images/F13_Labs_lab06_SimpleWebPage.png)
 
 Notice that the words is and for come up in orange, and everything after the ' mark comes up in green—until the end of the line. Can you figure out why? (Hint: it has to do with that fact that IDLE thinks you are trying to write Python code)
 
@@ -202,27 +202,27 @@ The next step is to save this as an HTML file. You'll use the normal way of savi
 
 First, use the "Save As" option from the File menu:
 
-![](F13_Labs_lab06_SaveAsOption.png "F13_Labs_lab06_SaveAsOption.png")
+![F13_Labs_lab06_SaveAsOption.png](/images/F13_Labs_lab06_SaveAsOption.png)
 
 Then, in the box that comes up, navigate to the public\_html/cs8/lab06 directory.
 
 Depending on what directory you were in when you typed the idle3 command, you might already be there.
 
-![](F13_Labs_lab06_NavigatingTo_public_html.png "F13_Labs_lab06_NavigatingTo_public_html.png")
+![F13_Labs_lab06_NavigatingTo_public_html.png](/images/F13_Labs_lab06_NavigatingTo_public_html.png)
 
 Once you are in the public\_html/cs8/lab06 directory—pull down the drop box at the bottom where you can select All files (\*) instead of Python and text files (\*.py,\*.pyw,\*.txt) as shown above. This is important, because you want to save your file as a .html file instead of as a Python file.
 
 (**NOTE: The image below shows lab04 instead of lab06. This isn't a typo, so don't bother reporting it**--I'm reusing this image from a previous quarter when this was lab04. I just didn't think it was worth the time to redo the image just to change the lab nunber.)
 
-![](F13_Labs_lab06_NavigatingTo_cs8_lab06_andSelectingAllFiles.png "F13_Labs_lab06_NavigatingTo_cs8_lab06_andSelectingAllFiles.png")
+![F13_Labs_lab06_NavigatingTo_cs8_lab06_andSelectingAllFiles.png](/images/F13_Labs_lab06_NavigatingTo_cs8_lab06_andSelectingAllFiles.png)
 
 Then, type in the name sample.html as the filename, as shown below. (Again, it says lab04, when it should say lab06, but you're young---you'll adjust.)
 
-![](F13_Labs_lab06_puttingIn_sample.html_asName.png "F13_Labs_lab06_puttingIn_sample.html_asName.png")
+![F13_Labs_lab06_puttingIn_sample.html_asName.png](/images/F13_Labs_lab06_puttingIn_sample.html_asName.png)
 
 Once you've saved the file with a name ending in .html, you should see that the special coloring that was intended for Python all goes away as shown below:
 
-![](F13_Labs_lab06_puttingIn_sample.html_withoutColors.png "F13_Labs_lab06_puttingIn_sample.html_withoutColors.png")
+![F13_Labs_lab06_puttingIn_sample.html_withoutColors.png](/images/F13_Labs_lab06_puttingIn_sample.html_withoutColors.png)
 
 Your file show now be on the web! You can look at the URL shown below to verify this:
 
@@ -230,7 +230,7 @@ Your file show now be on the web! You can look at the URL shown below to verify 
 
 It should look something like this:
 
-![](F13_Labs_lab06_whatWebPageShouldLookLike.png "F13_Labs_lab06_whatWebPageShouldLookLike.png")
+![F13_Labs_lab06_whatWebPageShouldLookLike.png](/images/F13_Labs_lab06_whatWebPageShouldLookLike.png)
 
 ### Step 1c: Troubleshooting your HTML (if things don't look right)
 
@@ -919,7 +919,7 @@ As you can see, each line in the input file has the following format:
 
 On a web page, we want this data to be in a table like this one:
 
-![](F13_Labs_lab06_ExampleTable.png "F13_Labs_lab06_ExampleTable.png")
+![F13_Labs_lab06_ExampleTable.png](/images/F13_Labs_lab06_ExampleTable.png)
 
 We will use Python's ability to write to files (explored on <F13:Homework:H13>) to accomplish this.
 
