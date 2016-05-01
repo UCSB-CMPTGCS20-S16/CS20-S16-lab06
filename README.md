@@ -18,18 +18,20 @@ By the time you have completed this lab, you should be able to understand the co
 
 -   opening files
 -   reading from files
--   closing files.
+-   closing files
 
 In particular, you'll be able to:
 
--   Read data from a file into a list of strings.
--   Get rid of extra new lines in that data (using the strip() method)
--   Split that data (if separated by spaces, or commas) into separate fields, combine those into a namedtuple object, and add that object to a list of namedtuples
--   Work with the resulting list of namedtuples
--   Write to a file using Python code
+-   read data from a file into a list of strings
+-   get rid of extra new lines in that data (using the strip() method)
+-   split that data (if separated by spaces, or commas) into separate fields, combine those into a namedtuple object, and add that object to a list of namedtuples
+-   work with the resulting list of namedtuples
+-   write to a file using Python code
 -   read data from a file, convert it to HTML format, and write it to a file on the web
 
-This will also provide additional practice with the concepts of "index" vs. "value" when dealing with lists. Pair Programming is OPTIONAL for this lab ==
+This will also provide additional practice with the concepts of "index" vs. "value" when dealing with lists. 
+
+Pair Programming is OPTIONAL for this lab.
 
 What you'll be doing
 --------------------
@@ -38,7 +40,10 @@ Unlike the last several labs, there is no "starting point" file for this lab. Yo
 
 You'll need to come up with your own tests as well.
 
-ALSO: for students in CCS CS 20: for this lab you WILL DO IT ON CSIL. Use either PuTTY or scp to connect to the CSIL machines and work there.
+**For students in CCS CS 20**: You will do this lab on CSIL. Instructions for connecting to CSIL can be found in Steps 0-2 of [lab02](https://github.com/UCSB-CMPTGCS20-S16/CS20-S16-lab02/blob/master/README.md).
+
+
+@@@@@@@@@@@@@ START EDITING AGAIN FROM HERE @@@@@
 
 Programming, Step-by-Step
 =========================
