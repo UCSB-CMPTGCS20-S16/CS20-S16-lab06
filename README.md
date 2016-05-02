@@ -372,8 +372,8 @@ Open up IDLE
 
 Use this sequence of commands so that your current default directory is ~/cs20/lab06, and you have idle open in that directory:
 
-`cd ~/cs20/lab06`
-`idle`
+    cd ~/cs20/lab06
+    idle
 
 Then open up a window where you can create a new file. This time, however, we are not going to create a Python program (at least not at first.) We are going to create a data file.
 
@@ -438,9 +438,9 @@ or like this on Windows:
 
 There is nothing special about the variable name where—you could call it myDir or whatever name you like. We are just defining a string variable that we are adding in front of the filename to tell Python where to find it.
 
-What you put after `where=` will depend on where you created your lab06 directory, and will depend on whether you are on working on Windows XP, Windows Vista, Mac, or Linux.
+What you put after `where =` will depend on where you created your lab06 directory, and will depend on whether you are on working on Windows XP, Windows Vista, Mac, or Linux.
 
-The same trick might be needed on CSIL if you didn't cd into the ~/cs20/lab06 directory before typing `idle`—in this case, use where='/path/to/your/home/directory/cs20/lab06'
+The same trick might be needed on CSIL if you didn't cd into the *~/cs20/lab06* directory before typing `idle`—in this case, use `where='/path/to/your/home/directory/cs20/lab06'`
 
 ### A note about the home directory symbol `~`
 
@@ -472,21 +472,21 @@ If you have reached this point, you've already created a file named 'students.tx
 
 and you've opened it with a line like this (possibly with an extra where variable if needed to specify the location of the file)
 
-    &gt;&gt;&gt; infile = open('students.txt','r')
-    &gt;&gt;&gt;
+    >>> infile = open('students.txt','r')
+    >>>
 
 Now, the question is, what can we do with an open file?
 
-Since we opened this file with the 'r' flag, as you may know from the reading in Section 5.2 of your textbook, this is a file we have opened for reading. That means we can read data file this file into Python variables, as shown below. Try this at the IDLE prompt:
+Since we opened this file with the 'r' flag, this is a file we have opened for reading. That means we can read data from this file into Python variables, as shown below. Try this at the IDLE prompt:
 
-    &gt;&gt;&gt; for line in infile:
+    >>> for line in infile:
           print(line)
 
 You should get output like this. Notice the extra newline in between each name.
 
 There are two newlines because one comes from the print function in Python, and the other was in the original data file. We'll show how to get rid of these extra newlines in a later step.
 
-    &gt;&gt;&gt; for line in infile:
+    >>> for line in infile:
           print(line)
      
 
@@ -510,11 +510,11 @@ There are two newlines because one comes from the print function in Python, and 
 
     JACOB, HERNANDEZ, STATS
 
-    &gt;&gt;&gt;
+    >>>
 
 We see that we can read data from the file into a variable and use a for loop to print each line. But what would be more useful would be to store the data in a list of Students (where Student is a Named Tuple with the fields firstName, lastName and major)—that gives us more options as we work with the data. We'll do that in next step.
 
-First, though we need to close the file—that frees up resources on the computer, and allows us to reopen the file, and start reading it from the beginning. So, type this next:
+First, though we need to close the file. This frees up resources on the computer, and allows us to reopen the file and start reading it from the beginning. So, type this next:
 
     >>> infile.close()
     >>>
@@ -523,33 +523,32 @@ First, though we need to close the file—that frees up resources on the compute
 
 Notice the difference between the syntax of:
 
--   opening a file, e.g. infile = open("students.txt","r")
--   and closing a file, e.g. infile.close()
+-   opening a file, e.g. `infile = open("students.txt","r")`
+-   and closing a file, e.g. `infile.close()`
 
-In the first case, we are using the open function, and writing an assignment statement that creates a new variable called infile. We can choose any name we want for this variable (e.g. studentFile, theFile, etc.) It is not required that this variable end with "file"—for example, we could call it inputData, or even fred if we want. But it is good practice to name it something that reminds us it is a variable that stands for an open file.
+In the first case, we are using the open function, and writing an assignment statement that creates a new variable called infile. We can choose any name we want for this variable (e.g. studentFile, theFile, etc.) It is not required that this variable end with "file"—for example, we could call it "inputData", or even "fred" if we want. But it is good practice to name it something that reminds us it is a variable that stands for an open file.
 
-In the second case, we are using a method of the file variable—that is why we write the variable name infile first, and then write a dot (.), and finally the name of the function (close).
+In the second case, we are using a method of the file variable—that is why we write the variable name (infile) first, and then write a dot (.), and finally the name of the function (close).
 
-This is similar to how we wrote t.forward(100) or t.right(90) when the variable t referred to a turtle—forward() and right() are methods of any variable that refers to a Turtle, just like close() is a method of any variable that refers to a file object.
+This is similar to how we wrote `t.forward(100)` or `t.right(90)` when the variable `t` referred to a turtle—`forward()` and `right()` are methods of any variable that refers to a Turtle, just like `close()` is a method of any variable that refers to a file object.
 
 -   In this class we only use methods—we don't write any ourselves.
 -   However, if you take future CS courses, you may see the idea of methods come up again, and you'll learn how to write your own methods:
--   You'll see methods again in CS24 in C++, and in CS56 in Java.
--   C doesn't have the concept of methods, so you won't see methods in CS16.
+    -   You'll see methods again in CS24 in C++, and in CS56 in Java
 
 ### To review...
 
 In this step, we did three things:
 
--   (1) Opened a file with infile = open('students.txt','r')
--   (2) Read data from the file with a loop:
+1. Opened a file with `infile = open('students.txt','r')`
+2. Read data from the file with a loop:
 
-<!-- -->
-
+    ```
     for item in infile:
-       print(item)
+        print(item)
+    ```
 
--   (3) Closed the file using infile.close()
+3. Closed the file using `infile.close()`
 
 We'll do these three things again in the next step of this lab, but instead of just printing out the data, we'll read it into a list so we can work with it further, even after the file is closed.
 
@@ -562,29 +561,29 @@ In this step, we'll read the data into a list of strings.
 
 Type the following in at the Python prompt:
 
-    &gt;&gt;&gt; infile = open('students.txt','r')
-    &gt;&gt;&gt; inputList=[]
-    &gt;&gt;&gt; for item in infile:
+    >>> infile = open('students.txt','r')
+    >>> inputList=[]
+    >>> for item in infile:
              inputList = inputList + [item]
 
           
-    &gt;&gt;&gt; infile.close()
-    &gt;&gt;&gt;  
+    >>> infile.close()
+    >>> 
 
 Once you've typed in those four lines, you can type the name of the variable inputList at the Python prompt to see what inputList contains. You should see something like this:
 
-    &gt;&gt;&gt; inputList
+    >>> inputList
     ['SHARON, ROBINSON, PHYSICS \n', 'BRIAN, CLARK, MUSIC\n', 'MICHELLE, RODRIGUEZ, UNDEC\n',
     'RONALD, LEWIS, MATH\n', 'LAURA, LEE, ENGLISH\n', 'ANTHONY, WALKER, UNDEC\n', 
     'SARAH, HALL, CS\n', 'KEVIN, ALLEN, CHEM\n', 'KIMBERLY, YOUNG, UNDEC\n', 
     'JACOB, HERNANDEZ, STATS\n']
-    &gt;&gt;&gt;
+    >>>
 
 It should be clear from the \[ \] characters and the commas, but in case it isn't, what we have is a list of strings:
 
-    &gt;&gt;&gt; type(inputList)
+    >>> type(inputList)
     <class 'list'>
-    &gt;&gt;&gt; for item in inputList:
+    >>> for item in inputList:
           print(type(item))
 
     <class 'str'>
@@ -597,7 +596,7 @@ It should be clear from the \[ \] characters and the commas, but in case it isn'
     <class 'str'>
     <class 'str'>
     <class 'str'>
-    &gt;&gt;&gt;
+    >>>
 
 So, what can we do with this list?
 
@@ -609,18 +608,20 @@ and returns a named tuple such as:
 
     Student(fname='SHARON', lname='ROBINSON', major='PHYSICS')
 
-We'll call this function `makeStudentFromDataFileLine`. It will take one parameter, `dataFileLine`
+We'll call this function `makeStudentFromDataFileLine`. It will take one parameter, `dataFileLine`.
 
 With that function, we can go through the list of strings and turn it into a list of `Student` named tuples.
 
 The next step explains how to do that.
 
-### Step 5b: Adding code to lab06Funcs.py to read the file into a list of Students
+### Step 5b: Adding code to `lab06Funcs.py` to read the file into a list of Students
 
-Here's how we define a named tuple. Put this in your lab06Funcs.py file, just after the opening comment.
+Here's how we define a named tuple. Put this in your `lab06Funcs.py` file, just after the opening comment.
 
     from collections import namedtuple
     Student = namedtuple("Student","fName lName major")
+
+@@@@@@@@@@@@@@@ CONTINUE EDITING FROM HERE @@@@@@@@@@@@@@@@@@@
 
 Then, add this bit of code just afterwards to read the data file into a list of strings:
 
