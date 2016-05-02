@@ -38,7 +38,7 @@ Unlike the last several labs, there is no "starting point" file for this lab. Yo
 
 You'll need to come up with your own tests as well.
 
-**For students in CCS CS 20**: You will do this lab on CSIL. Instructions for connecting to CSIL can be found in Steps 0-2 of [lab02](https://github.com/UCSB-CMPTGCS20-S16/CS20-S16-lab02/blob/master/README.md).
+**For students in CCS CS 20**: You will do this lab on CSIL. Instructions for connecting to CSIL from your own machine can be found in Steps 0-2 of [lab02](https://github.com/UCSB-CMPTGCS20-S16/CS20-S16-lab02/blob/master/README.md).
 
 Pair Programming is OPTIONAL for this lab.
 
@@ -120,30 +120,28 @@ The first web page we will create will be at the following URL (except it will h
 
 So the first thing we need to do is create the folder that corresponds to this URL.
 
-@@@@@@@@@@@@ CONTINUE EDITING HERE @@@@@@@@@@@@@
-
-<http://www.cs.ucsb.edu/~yourusername/cs8/lab06/sample.html>
+<http://www.cs.ucsb.edu/~yourusername/cs20/lab06/sample.html>
 
 ### Step 1a: Making the directory for the web page
 
 Bring up a terminal, and use these two commands:
 
-    -bash-4.1$ mkdir -p ~/public_html/cs8/lab06
-    -bash-4.1$ cd ~/public_html/cs8/lab06
+    -bash-4.1$ mkdir -p ~/public_html/cs20/lab06
+    -bash-4.1$ cd ~/public_html/cs20/lab06
 
 The first command is the familiar mkdir command—but with an extra option. The -p option stands for path and indicates that the command should create the entire path—that is, with one command, we'll create:
 
     ~/public_html
-    ~/public_html/cs8
-    ~/public_html/cs8/lab06
+    ~/public_html/cs20
+    ~/public_html/cs20/lab06
 
-The second command (cd ~/public\_html/cs8/lab06) puts us all the way down there—three directories down—with just one command. This would be the equivalent of doing all of the following commands—but we did it with just two commands!
+The second command (`cd ~/public_html/cs20/lab06`) puts us all the way down there—three directories down—with just one command. This would be the equivalent of doing all of the following commands—but we did it with just two commands!
 
     -bash-4.1$ cd
     -bash-4.1$ mkdir public_html
     -bash-4.1$ cd public_html
-    -bash-4.1$ mkdir cs8
-    -bash-4.1$ cd cs8
+    -bash-4.1$ mkdir cs20
+    -bash-4.1$ cd cs20
     -bash-4.1$ mkdir lab06
     -bash-4.1$ cd lab06
 
@@ -159,9 +157,9 @@ This causes a bit of a quirk, as we'll see—since IDLE at first thinks we are w
 
 If you already know another Unix text editor—emacs, vi, or vim—you can use one of those. If you are interested in learning one of those, your instructor can point you to resources for learning those—if you are going on to CS16, you'll need to learn that skill eventually anyway.
 
-Open up IDLE (the command, as you may know by now, is idle3), and go to "New" to create a new window—the kind of window that you would normally use for Python function definitions.
+Open up IDLE (the command, as you may know by now, is idle), and go to "New" to create a new window—the kind of window that you would normally use for Python function definitions.
 
-But instead of typing in Python code, type in the following—this is HTML code, the language used for making web pages. Use your name instead of "Jennifer" (and perhaps "he" instead of "she" as needed.)
+But instead of typing in Python code, type in the following—this is HTML code, the language used for making web pages. Use your name instead of "Jennifer" and alter gender pronouns as desired.
 
 Note that I made this an image—that means you have to type it, you can't just copy and paste.
 
@@ -177,13 +175,13 @@ First, use the "Save As" option from the File menu:
 
 ![F13_Labs_lab06_SaveAsOption.png](/images/F13_Labs_lab06_SaveAsOption.png)
 
-Then, in the box that comes up, navigate to the public\_html/cs8/lab06 directory.
+Then, in the box that comes up, navigate to the *public\_html/cs20/lab06 directory*.
 
-Depending on what directory you were in when you typed the idle3 command, you might already be there.
+Depending on what directory you were in when you typed the idle command, you might already be there.
 
 ![F13_Labs_lab06_NavigatingTo_public_html.png](/images/F13_Labs_lab06_NavigatingTo_public_html.png)
 
-Once you are in the public\_html/cs8/lab06 directory—pull down the drop box at the bottom where you can select All files (\*) instead of Python and text files (\*.py,\*.pyw,\*.txt) as shown above. This is important, because you want to save your file as a .html file instead of as a Python file.
+Once you are in the *public\_html/cs20/lab06* directory—pull down the drop box at the bottom where you can select All files (\*) instead of Python and text files (\*.py,\*.pyw,\*.txt) as shown above. This is important, because you want to save your file as a .html file instead of as a Python file.
 
 (**NOTE: The image below shows lab04 instead of lab06. This isn't a typo, so don't bother reporting it**--I'm reusing this image from a previous quarter when this was lab04. I just didn't think it was worth the time to redo the image just to change the lab nunber.)
 
@@ -197,9 +195,9 @@ Once you've saved the file with a name ending in .html, you should see that the 
 
 ![F13_Labs_lab06_puttingIn_sample.html_withoutColors.png](/images/F13_Labs_lab06_puttingIn_sample.html_withoutColors.png)
 
-Your file show now be on the web! You can look at the URL shown below to verify this:
+Your file should now be on the web! You can look at the URL shown below to verify this (again, replacing "~yourusername" with your username):
 
-<http://www.cs.ucsb.edu/~yourusername/cs8/lab06/sample.html>
+<http://www.cs.ucsb.edu/~yourusername/cs20/lab06/sample.html>
 
 It should look something like this:
 
@@ -220,7 +218,7 @@ In general, HTML consists of pairs of open tags and close tags, that must match.
 
 -   Some common mistakes:
     -   Be sure that you didn't use a backslash (\\) instead of a forward slash (/)
-    -   Be sure that you didn't use two open tags (`<h1>Jennifer's` `test` `web` `page<h1>`) instead of an open and a close tag.
+    -   Be sure that you didn't use two open tags (`<h1>Jennifer's test web page<h1>`) instead of an open and a close tag.
 
 Your pair partner may be able to help you spot any differences between the sample code given, and the code you need to type.
 
@@ -244,7 +242,7 @@ For now, we need to move on though, because there's lots more to do on today's l
 
 ### IMPORTANT NOTE IF WORKING IN A PAIR
 
-If you are working a pair, at some point before this lab is due, you must repeat Step 1 for the other pair partner(s) in your group—you'll both be responsible (if registered as a pair) that each of you has the simple web page shown above.
+If you are working a pair, at some point before this lab is due, you must repeat Step 1 for the other pair partner in your group—you'll both be responsible (if registered as a pair) that each of you has the simple web page shown above.
 
 But for now, I suggest you keep going with step 2, and come back and do that later.
 
