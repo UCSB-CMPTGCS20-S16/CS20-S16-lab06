@@ -59,9 +59,9 @@ The initial driver will be the one that logged in to CSIL.
 
 NO PAIRS UNLESS BOTH OF YOU ARE PRESENT.
 
-### Step 0b: Create a directory for lab06, and start lab06Funcs.py and lab06Tests.py in it
+### Step 0b: Create a directory for lab06, and start `lab06Funcs.py` and `lab06Tests.py` in it
 
-Create a ~/cs20/lab06 directory, and start a new file in it called lab06Funcs.py, using either emacs or idle3 as your editor.
+Create a *~/cs20/lab06* directory, and start a new file in it called `lab06Funcs.py`, using either emacs or idle as your editor.
 
 NOTE WELL:
 
@@ -621,8 +621,6 @@ Here's how we define a named tuple. Put this in your `lab06Funcs.py` file, just 
     from collections import namedtuple
     Student = namedtuple("Student","fName lName major")
 
-@@@@@@@@@@@@@@@ CONTINUE EDITING FROM HERE @@@@@@@@@@@@@@@@@@@
-
 Then, add this bit of code just afterwards to read the data file into a list of strings:
 
     def lineToStudent(inputLine):
@@ -677,34 +675,32 @@ Then after that function definition, add this code:
 
 Put this code in your file, and use the Run/Run Module\[F5\] command to compile the code. Assuming you have no errors, you should now be able to type `students` at the Python prompt and see the list of students, like this:
 
-    &gt;&gt;&gt; ================================ RESTART ================================
-    &gt;&gt;&gt;  
-    &gt;&gt;&gt; students
+    >>> ================================ RESTART ================================
+    >>>  
+    >>> students
     [Student(fName='SHARON', lName='ROBINSON', major='PHYSICS'), Student(fName='BRIAN', lName='CLARK', major='MUSIC'), 
     Student(fName='MICHELLE', lName='RODRIGUEZ', major='UNDEC'), Student(fName='RONALD', lName='LEWIS', major='MATH'), 
     Student(fName='LAURA', lName='LEE', major='ENGLISH'), Student(fName='ANTHONY', lName='WALKER', major='UNDEC'), 
     Student(fName='SARAH', lName='HALL', major='CS'), Student(fName='KEVIN', lName='ALLEN', major='CHEM'), 
     Student(fName='KIMBERLY', lName='YOUNG', major='UNDEC'), Student(fName='JACOB', lName='HERNANDEZ', major='STATS')]
-    &gt;&gt;&gt;
+    >>>
 
-### Step 5c: A note about the strip() and split() methods
+### Step 5c: A note about the `strip()` and `split()` methods
 
 Before we continue to work with the list of students, a short digression.
 
 Look back at the lineToStudent function. Find where it uses the `strip()` function and the `split()` function. These functions are both string *methods*—that is, they are applied to a string variable using the dot operator, e.g. `item.strip()` or `itemStripped.split(',')`
 
-As a reminder, we say "methods" before when we used the Turtle functions back in Chapter 1—the turtle had "methods"—functions we applied using the "dot" operator.
+As a reminder, we said "methods" before when we used the Turtle functions back in lab03—the turtle had "methods"—functions we applied using the "dot" operator.
 
--   The `split()` method is discussed in your textbook in Section 4.3 (p. 127)—it is used to split a string into a list of strings. The argument is a string that is used as the character that separates the items (in this case, a comma.)
+-   The `split()` method is used to split a string into a list of strings. The argument is a string that is used as the character that separates the items (in this case, a comma.)
 -   The `strip()` method simply takes a string and returns a new string that is the same as the old string, except that any spaces, tabs or newline characters ('whitespace') at the beginning and the end has been 'stripped off'.
-
-You should take note of these methods and how the work, since there may be material about that on the next midterm exam, and/or the final exam.
 
 ### Step 5d: An Example Computation on this Data: the whatMajor function
 
 Now that we have this data, we can do lots of different kinds of computations on this data.
 
-For example, here is a function that, given the first name of a student, returns us a string indicating their major. (Note that if more than one student matches, we'll only return the first match—for any given function call, you can only return once!)
+For example, here is a function that, given the first name of a student, returns us a string indicating their major. (Note that if more than one student matches, we'll only return the first match. For any given function call, you can only return once!)
 
 Add this function definition into your file, right after the definition of lineToStudent, and then compile again:
 
@@ -730,11 +726,7 @@ Add this function definition into your file, right after the definition of lineT
 
         return False
 
-Then, set up the lab06Tests.py file to test this function. Into the file, paste this "boilerplate code" for testing:
-
-    # @@@ INSERT YOUR NAME HERE
-
-    # lab06Tests.py    Tests for lab06, UCSB CS8, P. Conrad, 05/06/2014
+Then, set up the `lab06Tests.py` file to test this function. Into the file, paste this "boilerplate code" for testing:
 
     import unittest            
     from lab06Funcs import *   
@@ -765,6 +757,7 @@ Then, set up the lab06Tests.py file to test this function. Into the file, paste 
     if __name__ == '__main__':
 
         # To run ALL tests, uncomment the "unittest.main(exit=False)" line
+        
         # unittest.main(exit=False)  
 
         # Uncomment "runTestsWithPrefix" line to run just SOME tests
@@ -790,7 +783,7 @@ and then, replace the comment:
 with a test for whatMajor like this one.
 
 -   This test case sets up the variable students as a list of students.
--   Then it calls whatMajor with
+-   Then it calls whatMajor with:
     -   "FRED" as the first parameter
     -   students as the second parameter
 -   It asserts that the result should be "HISTORY"
@@ -803,7 +796,7 @@ with a test for whatMajor like this one.
 
 Now, set up some tests cases with your own name and major, and that of a few other people, real or made up.
 
-Try testing the function, both at the Python prompt, as well as by running the lab06Tests.py file to see that your tests pass.
+Try testing the function, both at the Python prompt, as well as by running the `lab06Tests.py` file to see that your tests pass.
 
 Now it is your turn to do some coding!
 
@@ -812,30 +805,30 @@ Step 6: Writing five functions that work with a list of Students
 
 Now you need to write five functions on your own.
 
-In each case, be sure to include a "docstring comment" (similar to the one in the whatMajor() function above) that
+In each case, be sure to include a "docstring comment" (similar to the one in the `whatMajor()` function above) that
 
 -   starts with a one line description of the function,
 -   then has an example of how the function works.
 
-Then, add tests cases to the lab06Tests.py file. In each case, modify the line
+Then, add tests cases to the `lab06Tests.py` file. In each case, modify the line
 
         runTestsWithPrefix("lab06Tests.py","test_whatMajor") 
 
-changing whatMajor to whatever function you are testing.
+changing `whatMajor` to whatever function you are testing.
 
-### Step 6a: whatLName()
+### Step 6a: `whatLName()`
 
-Using the function whatMajor() as a model, write a function that will return the last name of a student, given the student's first name. For now, ignore the possibility that there might be more than one student with a given first name—just return the first match you find. If no students are found with that first name, return False.
+Using the function `whatMajor()` as a model, write a function that will return the last name of a student, given the student's first name. For now, ignore the possibility that there might be more than one student with a given first name—just return the first match you find. If no students are found with that first name, return False.
 
 The parameters to your function should be the first name to search for and the list of students.
 
-### Step 6b: countUndec()
+### Step 6b: `countUndec()`
 
 Now write a function that counts the number of students in the list that have "UNDEC" as their major. You'll need to pass in only the list of students, and return the answer as an int.
 
 Use the accumulator pattern on a variable "count". Initialize it to zero, and add one to it each time you find a match. Return the value of count when you are finished.
 
-### Step 6c: lNamesOfUndec()
+### Step 6c: `lNamesOfUndec()`
 
 Now write a function that returns the last names of all the students that have "UNDEC" as their major. You'll pass in only the list of students as a parameter. You'll return the answer as a list of strings. If no students were found that have UNDEC as their major, return an empty list.
 
@@ -843,13 +836,13 @@ Use the accumulator pattern on a variable "answerList". Initialize it to an empt
 
 Return the list you constructed.
 
-### Step 6d: majorToLNames()
+### Step 6d: `majorToLNames()`
 
-Now generalize the lNamesOfUndec() function—write a function that works exactly the same way, except that it takes two parameters, first a parameter thisMajor, and then the list of students as the second parameter. Instead of looking for "UNDEC", look for thisMajor. Return a list of strings containing all the last names of the students with the major specified by thisMajor. Return an empty list if there are no such students.
+Now generalize the `lNamesOfUndec()` function—write a function that works exactly the same way, except that it takes two parameters, first a parameter thisMajor, and then the list of students as the second parameter. Instead of looking for "UNDEC", look for thisMajor. Return a list of strings containing all the last names of the students with the major specified by thisMajor. Return an empty list if there are no such students.
 
-### Step 6e: allStudentsMajoringIn()
+### Step 6e: `allStudentsMajoringIn()`
 
-Now generalize further. This function will be the same as lNamesOfUndec(), except instead of appending just the last name of each student to the result list, append the entire Student object (i.e. the entire namedtuple). You'll end up with a list of Students, but a list that ONLY contains the students that are majoring in whatever major you passed into the function.
+Now generalize further. This function will be the same as `lNamesOfUndec()`, except instead of appending just the last name of each student to the result list, append the entire Student object (i.e. the entire namedtuple). You'll end up with a list of Students, but a list that ONLY contains the students that are majoring in whatever major you passed into the function.
 
 For example, instead of the result of the function being something like this, which is a list of strings representing last names:
 
@@ -865,7 +858,7 @@ it will be a list of Students, like this:
 
 When you are finished with all of these functions, you are ready for the final challenge in this lab: making a web page from a data file.
 
-But first, change the code at the bottom of lab06Tests.py so that it tests all of your functions. That is, comment out:
+But first, change the code at the bottom of `lab06Tests.py` so that it tests all of your functions. That is, comment out:
 
         # runTestsWithPrefix("lab06Tests.py","test_whatMajor") 
 
@@ -873,12 +866,12 @@ and un-comment the line:
 
         unittest.main(exit=False)  
 
-That should make lab06Tests.py run ALL of your tests, which should now all pass.
+That should make `lab06Tests.py` run ALL of your tests, which should now all pass.
 
 Step 7: Making a web page from a data file
 ------------------------------------------
 
-Now we are going to take students.txt, the same data file we've been working with, and turn it into a web page.
+Now we are going to take `students.txt`, the same data file we've been working with, and turn it into a web page.
 
 As you can see, each line in the input file has the following format:
 
@@ -888,18 +881,18 @@ On a web page, we want this data to be in a table like this one:
 
 ![F13_Labs_lab06_ExampleTable.png](/images/F13_Labs_lab06_ExampleTable.png)
 
-We will use Python's ability to write to files (explored on <F13:Homework:H13>) to accomplish this.
+We will use Python's ability to write to files to accomplish this.
 
-Step 8: Run the code from makeWebPageExample.py
------------------------------------------------
+Step 8: Run the code from `makeWebPageExample.py`
+-------------------------------------------------
 
 Back at Step 1, you were supposed to copy some files into your lab06 directory.
 
-One of those files was called makeWebPageExample.py.
+One of those files was called `makeWebPageExample.py`.
 
-Now, run that file--that is, open it in idle3, and select Run (or press F5.)
+Now, run that file--that is, open it in idle, and select Run (or press F5.)
 
-NOTE: You MUST put yourself into your own ~/cs8/lab06 directory with the cd command BEFORE you type idle3, otherwise, the program won't be able to find the students.txt file.
+NOTE: You MUST put yourself into your own *~/cs20/lab06* directory with the cd command BEFORE you type `idle`, otherwise, the program won't be able to find the `students.txt` file.
 
 Then at the Python prompt, type this:
 
@@ -907,36 +900,36 @@ Then at the Python prompt, type this:
 
 It should look something like this when you do it—except that instead of pconrad, you'll see your own username:
 
-    &gt;&gt;&gt; convertStudents2Table("students.txt","table.html")
+    >>> convertStudents2Table("students.txt","table.html")
      
      Look for the web page at this URL:
-     http://www.cs.ucsb.edu/~pconrad/cs8/lab06/table.html
+     http://www.cs.ucsb.edu/~pconrad/cs20/lab06/table.html
      Or if working on a PC or Mac, at this one:
 
-     file:///cs/faculty/pconrad/public_html/cs8/lab06/table.html
-    &gt;&gt;&gt;
+     file:///cs/faculty/pconrad/public_html/cs20/lab06/table.html
+    >>>
 
 If you read the output carefully, you'll see that what happens next depends on whether you are on CSIL, or on your own PC/Mac—but either way, it involves copying a web address into a browser. When you open up that web address, you should see a table like the one shown above, but with your own data.
 
 Note: if you completed the lab on your own PC or Mac, the web page may be at the "file" URL instead of the http URL.
 
-(Or maybe not. The code definitely works on CSIL and on Macs. I wrote the code so that it will probably work on Windows and Linux too—but since there are so many different possibilities, it is impossible for me to test them all. If you have trouble, just do the lab on CSIL. (You can do it over the internet using PuTTY or SSH---you don't have to come to CSIL in person.) If it doesn't work, make sure you have a students.txt file in the directory where you are running IDLE. You may need to do the same troubleshooting steps listed under "what if it doesn't work" in the instructions for lab06.)
+(Or maybe not. The code definitely works on CSIL and on Macs. I wrote the code so that it will probably work on Windows and Linux too—but since there are so many different possibilities, it is impossible for me to test them all. If you have trouble, just do the lab on CSIL. If it doesn't work, make sure you have a `students.txt` file in the directory where you are running IDLE. You may need to do the same troubleshooting steps listed under "what if it doesn't work" in Step 3. In addition, you may need to revisit the "What if I get 'Forbidden'" section from Step 1.)
 
 Assuming it does work, though, go on to the next step.
 
 Step 9: Making another data file and another web page
 -----------------------------------------------------
 
-Create a another file similar to students.txt—in the same format, with first name, last name, and major separated by commas—but with different names and majors. Save it with another name, say friends.txt.
+Create a another file similar to `students.txt`—in the same format, with first name, last name, and major separated by commas—but with different names and majors. Save it with another name, say `friends.txt`.
 
 Run the convertStudents2Table function again—this time, putting in the name of your data file, e.g. "friends.txt" as the first parameter, and "friends.html" as the second parameter.
 
-You should see another web page—this time with the new data you put in your "friends.txt" file formatted as an HTML page.
+You should see another web page—this time with the new data you put in your `friends.txt` file formatted as an HTML page.
 
 Step 10: Understanding the example code
 ---------------------------------------
 
-Now, you need to look through the code in makeWebPageExample.py and try to understand how it works.
+Now, you need to look through the code in `makeWebPageExample.py` and try to understand how it works.
 
 Note that you do NOT need to spend much time on the following functions—these are supplied for you to make your lives a little easier, but are not that important for you to focus on at this time:
 
@@ -960,7 +953,7 @@ The first is used as the filename in a call to open that opens an input file:
 
 The second is used as the last part of a filename in a call to open that opens an output file.
 
-The first two lines below create a directory for web pages under your home directory and build up a file name (using string concatenation) that starts with ~/public\_html/cs8/lab06 and ends with the value of outputFileName.
+The first two lines below create a directory for web pages under your home directory and build up a file name (using string concatenation) that starts with ~/public\_html/cs20/lab06 and ends with the value of outputFileName.
 
 They do so using some functions I'm supplying for you that take care of the complicated stuff (looking up your home directory and your username). (You don't need to worry about the internal details of those functions.)
 
@@ -988,7 +981,7 @@ Review what we did in step 1 with creating web pages to remind yourself about th
 
 This is done via these lines:
 
-    htmlFile.write("&lt;html&gt;\n")
+    htmlFile.write("<html>\n")
     htmlFile.write(webPageHeader("Table of Students"))
 
 We then have code which writes out the body of the page which contains an H1 heading, and table.
@@ -1001,9 +994,9 @@ To make sense of the code, you'll need a bit of an overview of how HTML tables w
 -   In between, there are table rows that start with `<tr>` and end with `</tr>`
 -   Each table row is either a sequence of `<th>...</th>` elements (table headers) or
     `<td>...</td>` elements (table data).
--   Each of the &lt;th&gt;&lt;/th&gt; elements contains the header for one column,
+-   Each of the <th></th> elements contains the header for one column,
     -   e.g. the first row: `<tr><th>First` `Name</th><th>Last` `Name</th><th>Major</th></tr>`
--   Each of the &lt;td&gt;&lt;/td&gt; elements contains the data for one entry in the table,
+-   Each of the <td></td> elements contains the data for one entry in the table,
     -   e.g. the second row `<tr><td>SHARON</td><td>ROBINSON</td><td>PHYSICS</td></tr>`
 
 For more information on HTML Tables, see: <http://www.w3schools.com/html/html_tables.asp>
@@ -1071,7 +1064,7 @@ Once you think you understand what is going on, you are ready for the challenge 
 Step 11: Write a program that formats weather data into a web page
 ------------------------------------------------------------------
 
-The file sb2009weather.csv is a file that contains actual weather data for Santa Barbara for every day during the 2009. You copied it into your lab06 directory in a previous step, but here is the link again to it if you cannot find it:
+The file `sb2009weather.csv` is a file that contains actual weather data for Santa Barbara for every day during 2009. You copied it into your lab06 directory in a previous step, but here is the link again to it if you cannot find it:
 
 <http://www.cs.ucsb.edu/~pconrad/cs8/14S/labs/lab06/code/sb2009weather.csv>
 
@@ -1107,11 +1100,11 @@ Your job: write a program that reads all the data from this file, and formats it
 
 ![F13_Labs_lab06_sbweather_as_a_table.png](/images/F13_Labs_lab06_sbweather_as_a_table.png)
 
-You can use the makeWebPageExample.py as a starting point—but be sure to make appropriate changes:
+You can use the `makeWebPageExample.py` as a starting point—but be sure to make appropriate changes:
 
--   The file you submit should be called lab06WebWriter.py
--   The comment at the top should be YOUR comment, not the one I had in webPageExample.py
--   More significantly: the main function shouldn't be called convertStudent2Table;
+-   The file you submit should be called `lab06WebWriter.py`
+-   The comment at the top should be YOUR comment, not the one I had in `webPageExample.py`
+-   More significantly: the main function shouldn't be called `convertStudent2Table`
     -   instead, call it **makeWeatherWebPage**
 -   Any variables that refer to student should be changed to something more appropriate.
 -   Your code should work by providing a function that you can call like this:
@@ -1131,15 +1124,41 @@ To get full credit on this lab, both partners (or all three partners) need to be
 
 So, before submitting via "turnin", make sure that for both (or all three partners), you can see the web page at:
 
-<http://www.cs.ucsb.edu/~usernamegoeshere/cs8/lab06/sb2009weather.html>
+<http://www.cs.ucsb.edu/~usernamegoeshere/cs20/lab06/sb2009weather.html>
 
 To do that, you need to:
 
--   copy the lab into each person's account (there are instructions for doing that in a previous lab)
+-   copy the lab into each person's account (instructions below)
 -   run the function makeWeatherWebPage in each person's account.
 -   check that the link above works with each person's username substituted
 
 Note: if you completed the lab on your own PC or Mac, it is important to run the files on CSIL at least once before doing the turnin step, so that the web pages are in place on CSIL.
+
+### Sharing code with your pair partner
+
+The original driver should already have saved several Python files into *~/cs20/lab06*
+
+In the driver's terminal window, type this to see if they are there:
+
+    ls ~/cs20/lab06
+
+You can type this command to see their contents, replacing `lab06Funcs.py` with whatever file you want to look at.
+
+    more ~/cs8/lab20/lab06Funcs.py
+
+If that works, continue. If not, make sure those files and folders exist and are in the right place.
+
+Let the navigator take over in their terminal window for moment. 
+
+Navigator: Create a *~/cs20/lab06* directory and cd into it. You are going to do a secure copy of the driver's file into your account. This allows you to continue working on the program in case the driver gets hit by a bus, or wins the lottery, quits school and moves to Hawaii next week.
+
+ALWAYS BE SURE YOU COPY THE CODE FROM DRIVER TO NAVIGATOR AT THE END OF EACH PAIR PROGRAMMING WORK SESSION. It is BOTH of your responsibility to have your OWN copy of the latest code. Here's how to do it:
+
+In navigator's window, type this. Substitute the driver's CSIL usernane in place of "driver", and todays date (with periods instead of slashes) in place of the word todaysDate:
+
+    scp driver@csil.cs.ucsb.edu:cs20/lab06/lab06Funcs.py lab06Funcs_fromDriver_todaysDate.py
+
+Do this for each file the two of you altered.
 
 Step 13: Final Submission
 -------------------------
@@ -1148,7 +1167,9 @@ But before submitting, do your final inspection—look over the rubric, make sur
 
 Then submit using:
 
-turnin lab06@cs8 lab06
+@@@@@@@@@@@@@@@@@@@ UPDATE TURNIN @@@@@@@@@@@@@@@@@@@@@
+
+    turnin lab06@cs8 lab06
 
 Evaluation and Grading Rubric
 =============================
@@ -1175,7 +1196,7 @@ Making a web page
 
 These steps have to do with the web pages you make at www.cs.ucsb.edu/~youruseridhere/cs8/lab06
 
--   (40 pts) Both partners (if applicable) or the one solo programmer has a visible web page (this is the one created by hand during the early step of the lab) at www.cs.ucsb.edu/~youruseridhere/cs8/lab06 per instructions above.
+-   (40 pts) Both partners (if applicable) or the one solo programmer has a visible web page (this is the one created by hand during the early step of the lab) at www.cs.ucsb.edu/~youruseridhere/cs20/lab06 per instructions above.
     -   Half the points apply to each lab partner's individual web page, but the grade APPLIES TO BOTH PARTNERS.
     -   So if you choose to work together, please be sure you take responsibility for make sure your partner completes this too!
 -   (40 pts) Completing a working version of the makeWeatherWebPage function. This will appears in your lab06WebWriter.py file.
@@ -1196,7 +1217,6 @@ In general, you get (30 pts) for following these practices, or lose those points
 
 However, additional points from other items on rubric may be "at risk" if the practices below are not followed---deductions are at the discretion of the grader.
 
--   Making a post to the Gauchospace forum for this assignment (see Step 0).
 -   Naming your files lab06Funcs.py, lab06Tests.py, lab06WebWriter.py
 -   Putting a comment on the first two lines of each file according to the instructions given (with both pair partners names, if applicable.)
 
