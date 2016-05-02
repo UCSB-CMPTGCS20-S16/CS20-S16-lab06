@@ -57,36 +57,7 @@ The initial driver will be the one that logged in to CSIL.
 -   If you are both logged in, ONE OF YOU LOG OUT NOW. You should both be sitting at the SAME COMPUTER.
 -   If you are both logged in, the temptation to "not really do pair programming" will be too great, at least until you are used to the system.
 
-Now, go to the lab06 Pair Partner (or Solo) Forum on Gauchospace, and register your pair, or that you are programming SOLO.
-
-YOU MUST DO THIS STEP EVEN IF YOU ARE PROGRAMMING SOLO so that we have a record of your choice.
-
-A link to that forum is here:
-
-@@@@@@@@@@@@@@@@@@ UPDATE THIS LINK @@@@@@@@@@@@@@@@@@@@@@
-<https://gauchospace.ucsb.edu/courses/mod/forum/view.php?id=166697>
-
-Here's what should be in your post:
-
-1. In the title, names of both pair partners, or if you are programming solo, just your own name and the word "solo" in parens, like this:
-
-    `Pat Isla and Chris Vista`
-
-    or
-
-    `Joe Gaucho (solo)`
-
-2. In the body write the answers to these questions:
-
-    1. your CSIL username (or both CSIL usernames if in a pair)
-
-    2. For PAIRS ONLY: What are two times you and your partner can meet at the CSIL lab this coming week for an hour each, in case you don't finish the lab today during lab? List those times here. Note that if your schedules are COMPLETELY incompatible, then you should ask the TA to reassign you now, before you even get started working.
-
-    3. For PAIRS ONLY: Did you and your pair partner exchange some kind of contact information (e.g. email, cell numbers, etc.). Note: the right answer should be YES, because you should do that NOW. :-)
-
-Only one partner needs to record this on Gauchospace on behalf of a pair. No trios for this assignment!
-
-AND: NO PAIRS UNLESS BOTH OF YOU ARE PRESENT.
+NO PAIRS UNLESS BOTH OF YOU ARE PRESENT.
 
 ### Step 0b: Create a directory for lab06, and start lab06Funcs.py and lab06Tests.py in it
 
@@ -124,7 +95,7 @@ You are going to copy some files from my directory *~pconrad/public\_html/cs8/14
 
 The following Unix command will do that on CSIL directly:
 
-    cp ~pconrad/public_html/cs8/14S/labs/lab06/code/* ~/cs8/lab06
+    cp ~pconrad/public_html/cs8/14S/labs/lab06/code/* ~/cs20/lab06
 
 Note that the \* means "copy everything that matches" from this directory.
 
@@ -132,7 +103,7 @@ Note that the \* means "copy everything that matches" from this directory.
 
 SCP stands for Secure Copy, and it is how you will copy files if you are working on your own machine. So, if you are using scp at the command line, use this command. Note the backslash in front of the \*, which is necessary to make sure the \* is interpreted on the remote machine, not the local machine.
 
-    scp yourusername@csil.cs.ucsb.edu:/cs/faculty/pconrad/public_html/cs8/14S/labs/lab06/code/\* ~/cs8/lab06
+    scp yourusername@csil.cs.ucsb.edu:/cs/faculty/pconrad/public_html/cs8/14S/labs/lab06/code/\* ~/cs20/lab06
 
 If using a GUI for scp (e.g. WinSCP, Fetch, Filezilla), then you need to connect to csil.cs.ucsb.edu, and navigate in the "remote" window to */cs/faculty/pconrad/public\_html/cs8/14S/labs/lab06/code* and copy everything from there into your lab06 directory by dragging.
 
