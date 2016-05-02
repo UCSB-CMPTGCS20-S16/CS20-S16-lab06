@@ -251,11 +251,11 @@ Step 2: Preparations
 
 ### Step 2a: Understanding the role of data files
 
-In working with Python so far, we have mostly been working with either one of two situations:
+In working with Python so far, we have mostly been working with either one of a few situations:
 
--   We've used Turtle graphics to draw interesting and fun shapes
--   We've develop Python functions that can take some parameters, do a computation, and return a result
--   We've then used Python's testing framework (e.g. self.assertEqual()) to test whether those functions return the expected results.
+-   We've used Turtle graphics to draw interesting and fun shapes.
+-   We've developed Python functions that can take some parameters, do a computation, and return a result.
+-   We've then used Python's testing framework (unittest) to test whether those functions return the expected results.
 
 However, in many real world applications, what we ultimately want to do is examine some data, and answer some questions about the data. Here are some examples:
 
@@ -288,7 +288,7 @@ Each line in this file is the following format:
 
 FIRSTNAME, LASTNAME, MAJOR
 
-As we will see, we can use various Python functions and methods to turn this into a list of Student [namedtuples](Python:_Named_Tuples "wikilink") and then write functions that work on a list of Students to answer various questions.
+As we will see, we can use various Python functions and methods to turn this into a list of Student [namedtuples](https://foo.cs.ucsb.edu/8wiki/index.php/Python:_Named_Tuples) and then write functions that work on a list of Students to answer various questions.
 
 #### Example 2: Earthquake Data
 
@@ -309,7 +309,8 @@ Here is some data on earthquakes that occurred during a three hour period on Mon
 
 Similar data can be found at the link below for earthquakes from the past hour, day, or week.
 
-<http://earthquake.usgs.gov/eqcenter/catalogs/index.php#csv>
+<http://earthquake.usgs.gov/earthquakes/map/> 
+(There is a download link on the left, and an archive accessible through Options, if you're interested.)
 
 This data is a bit more complex—it is in a format called "CSV", or "comma-separated values".
 
@@ -327,9 +328,9 @@ With this data we may want to ask questions such as:
 
 In the real world, this data often comes from a file on a hard drive. So learning to read data from a file into a program is a very important concept, and a very practical and useful tool.
 
-The simplest kind of file is a basic "text files"—the kind of file you can edit in one of several ways:
+The simplest kind of file is a basic "text file"—the kind of file you can edit in one of several ways:
 
--   With the IDLE editor on any machine that runs IDLE (Unix, Windows or Mac)
+-   With the IDLE editor on any machine that runs IDLE
     -   We edit the files the same way we edit Python files, but we save them with the .txt extension
 -   On Windows with programs such as "Notepad"
 -   On Mac with programs such as "TextEdit"
@@ -346,34 +347,33 @@ Of course, there are many programs that you can use to work with data files—sp
 
 ### Read more about working with data files (and review strings and lists) in your textbook
 
-Your textbook discusses working with data files in Chapter 5, section 5.2.
+Your textbook briefly discusses working with data files in Chapter 4, section 4.6.
 
--   You had some recent homework assignments on this section of the text, so it should be fresh in your mind.
--   Neverthless, it will help to read that section (or review it) as you work on this lab.
+You may also find it helpful to look at these sections about strings and lists:
 
-You may also find it helpful to review these sections from previous chapters:
+-   Techniques for working with strings from Sections 2.3 and 5.4
+-   Techniques for working with lists from Section 5.2
 
--   Techniques for working with strings from Section 3.2
--   Techniques for working with lists from Section 4.3.
+or review the notes from this lecture regarding lists. [S16:Lectures:04.07](https://foo.cs.ucsb.edu/8wiki/index.php/S16:Lectures:04.07)
 
 ### Step 2b: Learning about Named Tuples
 
-The following page described Named Tuples, a very useful feature of Python that is not covered in the Miller/Ranum textbook.
+Named Tuples are described in the textbook Section 5.1 but for further reading you can look at:
 
-Named Tuples were described in Lecture, but if you missed that discussion, or want to review it, please consult:
+-   This [tutorial on Named Tuples](https://foo.cs.ucsb.edu/8wiki/index.php/Python:_Named_Tuples) linked earlier in the lab as well
+-   The sample code from these two CS8 Lectures: [F13:Lectures:11.05](https://foo.cs.ucsb.edu/8wiki/index.php/F13:Lectures:11.05), [S14:Lectures:05.07](https://foo.cs.ucsb.edu/8wiki/index.php/S14:Lectures:05.07)
 
--   This [tutorial on Named Tuples](Python:_Named_Tuples "wikilink")
--   This sample code from <F13:Lectures:11.05> which contrasts parallel lists with named tuples. We will cover this code this quarter in the lecture on <S14:Lectures:05.07>
+@@@@@@@@@@@@ UPDATE THIS WITH LINKS FROM THIS QUARTER'S LECTURES @@@@@@@@@@@@@@@
 
 Step 3: Creating data files
 ---------------------------
 
 Open up IDLE
 
-If you are working in the Cooper Lab, or in CSIL, use this sequence of commands so that your current default directory is ~/cs8/lab06, and you have idle open in that directory:
+Use this sequence of commands so that your current default directory is ~/cs20/lab06, and you have idle open in that directory:
 
-`cd ~/cs8/lab06`
-`idle3`
+`cd ~/cs20/lab06`
+`idle`
 
 Then open up a window where you can create a new file. This time, however, we are not going to create a Python program (at least not at first.) We are going to create a data file.
 
@@ -392,16 +392,14 @@ In the new window, type in the following (or copy and paste it from this page in
 
 Then, save the file with the name `students.txt`
 
--   NOTE: Do NOT put a .py on the end. If the program tries to put a .py on the end, delete it. We want students.txt, not students.txt.py or students.py
+-   NOTE: Do NOT put a .py on the end. If the program tries to put a .py on the end, delete it. We want `students.txt`, not `students.txt.py` or `students.py`.
 
-In the Cooper lab and on CSIL, If you started in the ~/cs8/lab06 directory before starting IDLE, when you go to save the file, it should automatically try to save the file in your ~/cs8/lab06 directory.
-
-If you are on your own Mac or PC, you'll need to figure out how to save the file in the lab06 directory you created before.
+If you started in the ~/cs20/lab06 directory before starting IDLE, when you go to save the file, it should automatically try to save the file in your ~/cs20/lab06 directory.
 
 Now that you've saved this file, it should be possible to open this file at the Python prompt. Try typing this at the Python prompt (note that you don't type the &gt;&gt;&gt;—that's the prompt!)
 
-    &gt;&gt;&gt; infile = open('students.txt','r')
-    &gt;&gt;&gt;
+    >>> infile = open('students.txt','r')
+    >>>
 
 If you get back another `>>>` prompt as shown above, you are in good shape. If so, congratulations—move on to Step 3.
 
@@ -411,7 +409,7 @@ If not, see the "What if it doesn't work" section below.
 
 If, instead, you something like the following, then something is wrong:
 
-    &gt;&gt;&gt; infile = open('students.txt','r')
+    >>> infile = open('students.txt','r')
     Traceback (most recent call last):
     File "<pyshell#1>", line 1, in <module>
         infile = open('students.txt','r')
@@ -422,7 +420,7 @@ If, instead, you something like the following, then something is wrong:
     File "/Library/Frameworks/Python.framework/Versions/3.0/lib/python3.0/io.py", line 619, in __init__
         _fileio._FileIO.__init__(self, name, mode, closefd)
     IOError: [Errno 2] No such file or directory: 'students.txt'
-    &gt;&gt;&gt;
+    >>>
 
 The most important part of this is the last line: "No such file or directory: 'students.txt'"
 
@@ -430,30 +428,27 @@ What Python is telling us is that it can't find this file. This may be because y
 
 If you are on Mac or Windows, you may need to concatenate a directory with your filename, like this, on Mac:
 
-    &gt;&gt;&gt; where = '/Users/Bob/cs8/lab06/'
-    &gt;&gt;&gt; infile = open(where + 'students.txt', 'r')
+    >>> where = '/Users/Bob/cs20/lab06/'
+    >>> infile = open(where + 'students.txt', 'r')
 
 or like this on Windows:
 
-    &gt;&gt;&gt; where = 'c:/cs8/lab06/'
-    &gt;&gt;&gt; infile = open(where + 'students.txt', 'r')
+    >>> where = 'c:/cs20/lab06/'
+    >>> infile = open(where + 'students.txt', 'r')
 
 There is nothing special about the variable name where—you could call it myDir or whatever name you like. We are just defining a string variable that we are adding in front of the filename to tell Python where to find it.
 
-What you put after where= will depend on where you created your lab06 directory, and will depend on whether you are on working on Windows XP, Windows Vista, Mac, or Linux.
+What you put after `where=` will depend on where you created your lab06 directory, and will depend on whether you are on working on Windows XP, Windows Vista, Mac, or Linux.
 
-The same trick might be needed in Cooper or CSIL if you didn't cd into the ~/cs8/lab06 directory before typing idle3—in this case, use where='/path/to/your/home/directory/cs8/lab06'
+The same trick might be needed on CSIL if you didn't cd into the ~/cs20/lab06 directory before typing `idle`—in this case, use where='/path/to/your/home/directory/cs20/lab06'
 
-<div class="importantDiv">
-<h3 style="text-align:center">
-A note about the home directory symbol `~`
+### A note about the home directory symbol `~`
 
-</h3>
-As you may know `~` is a symbol for your home directory that you can use when you type commands in at the `-bash-4.1$` prompt (i.e. the <em>shell</em>.)
+As you may know `~` is a symbol for your home directory that you can use when you type commands in at the `-bash-4.1$` prompt (i.e. the *shell*.)
 
-However, you usually <em>can't</em> use `~` as an abbreviation for your home directory when accessing a file inside a program (whether that program is in Python, or C, or Java, or whatever).
+However, you usually *can't* use `~` as an abbreviation for your home directory when accessing a file inside a program (whether that program is in Python, or C, or Java, or whatever).
 
-That's because `~` is a symbol for home directory only in the <em>shell</em>, e.g. at the `-bash-4.1$` prompt
+That's because `~` is a symbol for home directory only in the *shell*, e.g. at the `-bash-4.1$` prompt
 
 Instead, determine what the full path to your home directory is by opening a new terminal window, doing a `cd` to return to your home directory, and then typing `pwd`. What comes up is the full path to your home directory, e.g. `/fs/home1/student/j/jsmith` or `/cs/student/jsmith`
 
@@ -463,9 +458,9 @@ So, that's what you need to use in your `where` variable:
 -   Correct: `where="/cs/student/jsmith/cs8/lab06/"`
 -   Correct: `where="/fs/home1/student/j/jsmith/cs8/lab06/"`
 
-Talk it over with your pair partner to make sure you both understand---and if it still isn't clear, ask your TA or instructor for help.
+Talk it over with your pair partner to make sure you both understand—and if it still isn't clear, ask your TA or instructor for help.
 
-</div>
+
 Step 4: Opening an input file, reading some data, closing the file
 ------------------------------------------------------------------
 
