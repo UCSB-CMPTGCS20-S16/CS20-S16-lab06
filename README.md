@@ -1157,8 +1157,21 @@ ALWAYS BE SURE YOU COPY THE CODE FROM DRIVER TO NAVIGATOR AT THE END OF EACH PAI
 In navigator's window, type this. Substitute the driver's CSIL usernane in place of "driver", and todays date (with periods instead of slashes) in place of the word todaysDate:
 
     scp driver@csil.cs.ucsb.edu:cs20/lab06/lab06Funcs.py lab06Funcs_fromDriver_todaysDate.py
+    
+Example:
+
+    scp jasen@csil.cs.ucsb.edu:cs20/lab06/lab06Tests.py lab06Tests_fromJasen_10.08.2013.py
+
+You should be prompted for a password–the DRIVER's password. PASS THE KEYBOARD TO THE DRIVER and have the driver type in the driver's own password. Don't share passwords!
+
+Then, pass the keyboard back to the navigator. The navigator should do an ls command to list files, and you'll see that the files was copied into your account. Use the more command to list the contents, e.g.:
+
+    more lab06WebWriter_fromJasen_10.08.2013.py
 
 Do this for each file the two of you altered.
+
+If it copied successfully, then hooray! Do this again right before you leave lab today, and at the end of each work session. This is the NAVIGATOR's RESPONSIBILITy–to see that they ALSO has the files that are being created in the driver's account.
+
 
 Step 13: Final Submission
 -------------------------
