@@ -76,16 +76,28 @@ Once you've opened that file, add a comment to the top of your file like this on
     # lab06Funcs.py  by Agnes Nitt and Jason Ogg for CS20 lab06,  11/13/2013
     # Writing to files in Python
 
-Then, save it under the name lab06Funcs.py
+Then, save it under the name `lab06Funcs.py`
 
-Also create a separate file called lab06Tests.py
+Also create a separate file called `lab06Tests.py`
 
     # lab06Tests.py  by Agnes Nitt and Jason Ogg for CS20 lab06,  11/13/2013
     # Tests for lab06Funcs.py 
 
-and save it under the name lab06Tests.py
+and save it under the name `lab06Tests.py`
 
 ### Step 0c: Copying some files into your lab06 directory
+
+We're going to create three new files and copy/paste the code and data from the links below. Same steps as the last lab: File => New Window, copy/paste, Save As.
+
+- [makeWebPageExample.py](https://raw.githubusercontent.com/UCSB-CMPTGCS20-S16/CS20-S16-lab06/master/makeWebPageExample.py)
+- [sb2009weather.csv](https://raw.githubusercontent.com/UCSB-CMPTGCS20-S16/CS20-S16-lab06/master/sb2009weather.csv)
+- [students.txt](https://raw.githubusercontent.com/UCSB-CMPTGCS20-S16/CS20-S16-lab06/master/students.txt)
+
+You can use IDLE as your editor. Be sure to save the names of the files exactly as shown above, with the correct extensions (`.py`, `.csv`, `.txt`). You'll learn what csv means in a minute if you don't know already, but just follow the instructions for now.
+
+### Step 0d: Copying files using cp or scp
+
+**If you copied the files using the method in Step0c, SKIP AHEAD TO STEP 1. Step0d is not set up for you yet.**
 
 The next step depends on whether you are working on CSIL, or your own machine, although, again, for this lab it is highly recommended that you work on CSIL. Even if you are working on your own machine, it will be better if you use your machine to connect to CSIL and work there.
 
