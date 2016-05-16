@@ -52,14 +52,30 @@ Step 0: Preliminaries
 
 ### Step 0a: Decide whether to work in pair, or alone, and if in pair, on initial driver/navigator
 
-The initial driver will be the one that logged in to CSIL.
 
--   If you are both logged in, ONE OF YOU LOG OUT NOW. You should both be sitting at the SAME COMPUTER.
--   If you are both logged in, the temptation to "not really do pair programming" will be too great, at least until you are used to the system.
+### Step 0b: Decide whether to work in pair, or alone, and if in pair, on initial driver/navigator
 
-NO PAIRS UNLESS BOTH OF YOU ARE PRESENT.
+Create a github repo for this lab called CS20-S16-lab06.
 
-### Step 0b: Create a directory for lab06, and start `lab06Funcs.py` and `lab06Tests.py` in it
+* Make it a "private" repo--with the new github plans, you should have the ability to create unlimited private repos.
+* Indicate that you want a README file to be created
+* Make the .gitignore file be one for Python
+
+### Step 0c: Add collaborators to your repo.
+
+
+Add the following users to your repo as collaborators (here are some [instructions for doing that](https://help.github.com/articles/adding-collaborators-to-a-personal-repository/))
+
+* pconrad (your instructor)
+* sarahmzhong (the undergrad mentor for this course)
+* Your Pair Partner, if applicable
+
+
+### Step 0d: Create a directory for lab06, 
+
+cd into your ~/github directory then use "git clone" to clone your repo.  (If you've forgotten how, ask for help).
+
+cd into your repository folder (i.e. ~/github/CS20-S16-lab06 )
 
 Create a *~/cs20/lab06* directory, and start a new file in it called `lab06Funcs.py`, using either emacs or idle as your editor.
 
