@@ -77,7 +77,7 @@ cd into your ~/github directory then use "git clone" to clone your repo.  (If yo
 
 cd into your repository folder (i.e. ~/github/CS20-S16-lab06 )
 
-Create a *~/cs20/lab06* directory, and start a new file in it called `lab06Funcs.py`, using either emacs or idle as your editor.
+Create a `~/github/CS20-S16-lab06` directory, and start a new file in it called `lab06Funcs.py`, using either emacs or idle as your editor.
 
 NOTE WELL:
 
@@ -371,9 +371,9 @@ Step 3: Creating data files
 
 Open up IDLE
 
-Use this sequence of commands so that your current default directory is ~/cs20/lab06, and you have idle open in that directory:
+Use this sequence of commands so that your current default directory is ~/github/CS20-S16-lab06, and you have idle open in that directory:
 
-    cd ~/cs20/lab06
+    cd ~/github/CS20-S16-lab06
     idle
 
 Then open up a window where you can create a new file. This time, however, we are not going to create a Python program (at least not at first.) We are going to create a data file.
@@ -395,7 +395,7 @@ Then, save the file with the name `students.txt`
 
 -   NOTE: Do NOT put a .py on the end. If the program tries to put a .py on the end, delete it. We want `students.txt`, not `students.txt.py` or `students.py`.
 
-If you started in the ~/cs20/lab06 directory before starting IDLE, when you go to save the file, it should automatically try to save the file in your ~/cs20/lab06 directory.
+If you started in the ~/github/CS20-S16-lab06 directory before starting IDLE, when you go to save the file, it should automatically try to save the file in your ~/github/CS20-S16-lab06 directory.
 
 Now that you've saved this file, it should be possible to open this file at the Python prompt. Try typing this at the Python prompt (note that you don't type the &gt;&gt;&gt;—that's the prompt!)
 
@@ -441,7 +441,7 @@ There is nothing special about the variable name `where`—you could call it `my
 
 What you put after `where =` will depend on where you created your lab06 directory, and will depend on whether you are on working on Windows XP, Windows Vista, Mac, or Linux.
 
-The same trick might be needed on CSIL if you didn't cd into the *~/cs20/lab06* directory before typing `idle`—in this case, use `where='/path/to/your/home/directory/cs20/lab06'`
+The same trick might be needed on CSIL if you didn't cd into the `~/github/CS20-S16-lab06` directory before typing `idle`—in this case, use `where='/path/to/your/home/directory/cs20/lab06'`
 
 ### A note about the home directory symbol `~`
 
@@ -893,7 +893,7 @@ One of those files was called `makeWebPageExample.py`.
 
 Now, run that file--that is, open it in idle, and select Run (or press F5.)
 
-NOTE: You MUST put yourself into your own *~/cs20/lab06* directory with the cd command BEFORE you type `idle`, otherwise, the program won't be able to find the `students.txt` file.
+NOTE: You MUST put yourself into your own `~/github/CS20-S16-lab06` directory with the cd command BEFORE you type `idle`, otherwise, the program won't be able to find the `students.txt` file.
 
 Then at the Python prompt, type this:
 
@@ -1129,53 +1129,24 @@ Note: if you completed the lab on your own PC or Mac, it is important to run the
 
 ### Sharing code with your pair partner
 
-The original driver should already have saved several Python files into *~/cs20/lab06*
+The easiest way to share coe with your pair partner is to:
 
-In the driver's terminal window, type this to see if they are there:
-
-    ls ~/cs20/lab06
-
-You can type this command to see their contents, replacing `lab06Funcs.py` with whatever file you want to look at.
-
-    more ~/cs8/lab20/lab06Funcs.py
-
-If that works, continue. If not, make sure those files and folders exist and are in the right place.
-
-Let the navigator take over in their terminal window for moment. 
-
-Navigator: Create a *~/cs20/lab06* directory and cd into it. You are going to do a secure copy of the driver's file into your account. This allows you to continue working on the program in case the driver gets hit by a bus, or wins the lottery, quits school and moves to Hawaii next week.
-
-ALWAYS BE SURE YOU COPY THE CODE FROM DRIVER TO NAVIGATOR AT THE END OF EACH PAIR PROGRAMMING WORK SESSION. It is BOTH of your responsibility to have your OWN copy of the latest code. Here's how to do it:
-
-In navigator's window, type this. Substitute the driver's CSIL usernane in place of "driver", and todays date (with periods instead of slashes) in place of the word todaysDate:
-
-    scp driver@csil.cs.ucsb.edu:cs20/lab06/lab06Funcs.py lab06Funcs_fromDriver_todaysDate.py
-    
-Example:
-
-    scp jasen@csil.cs.ucsb.edu:cs20/lab06/lab06Tests.py lab06Tests_fromJasen_10.08.2013.py
-
-You should be prompted for a password–the DRIVER's password. PASS THE KEYBOARD TO THE DRIVER and have the driver type in the driver's own password. Don't share passwords!
-
-Then, pass the keyboard back to the navigator. The navigator should do an ls command to list files, and you'll see that the files was copied into your account. Use the more command to list the contents, e.g.:
-
-    more lab06WebWriter_fromJasen_10.08.2013.py
-
-Do this for each file the two of you altered.
-
-If it copied successfully, then hooray! Do this again right before you leave lab today, and at the end of each work session. This is the NAVIGATOR's RESPONSIBILITy–to see that they ALSO has the files that are being created in the driver's account.
+* make sure they are a collaborator on your github repo
+* make sure you have done the `git add ...`, `git commit -m 'message'`, `git push origin master` steps.   
+* let your pair partner clone the repo, or do a `git pull origin master` if they already cloned it.
 
 
 Step 13: Final Submission
 -------------------------
 
-But before submitting, do your final inspection—look over the rubric, make sure everything looks ok.
+Before submitting, do your final inspection—look over the rubric, make sure everything looks ok.
 
-Then submit using:
+We are NOT using submit.cs in this case to test our code or submit. 
 
-@@@@@@@@@@@@@@@@@@@ UPDATE TURNIN @@@@@@@@@@@@@@@@@@@@@
+The only thing you need to do to submit is to go on Gauchospace, and put in the name of the repo where we can find your code and your web page.
 
-    turnin lab06@cs8 lab06
+@@@ TODO ADD INSTRUCTIONS FOR THAT HERE @@@
+
 
 Evaluation and Grading Rubric
 =============================
@@ -1214,7 +1185,7 @@ These steps have to do with the web pages you make at www.cs.ucsb.edu/~youruseri
     -   For folks working in pairs, if no weather web page appears on EITHER account, you lose all 35 of these points. You also lose all thirty-five of these points if the weather web page that appears was NOT created by your Python code (you get no points for creating one of these by hand.)
 -   (30 pts) For PAIRS: Each pair partner has a copy of the formatted weather webpage on his/her account
     -   for SOLO programmers, these points get added into the previous item, i.e. the previous item is worth sixty-five points instead of thirty-five.)
-    -   You lose all thirty of these points if you have the weather web page appearing on only ONE of the students accounts. You MUST copy the Python code and other files to BOTH accounts, and run the code under both accounts. You can use the "scp" command to do the copying.
+
 
 Professional software documentation practices
 ---------------------------------------------
@@ -1225,11 +1196,6 @@ However, additional points from other items on rubric may be "at risk" if the pr
 
 -   Naming your files lab06Funcs.py, lab06Tests.py, lab06WebWriter.py
 -   Putting a comment on the first two lines of each file according to the instructions given (with both pair partners names, if applicable.)
-
-<!-- -->
-
 -   All variable name shoud be appropriate (e.g. "students" vs. "weather" in your lab06WebWriter.py file.)
-    -   Make a post even if you are working alone--if working indiciate this.
--   Submitting an individual submission (instead of a pair submission) if you don't have specific permission from the TA or instructor to do so. (lose 30 points)
--   Submitting on time (late submissions might not be accepted at all---you might get a zero. But you will lose at least 30 points for being late.)
+-   Submitting on time
 
