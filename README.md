@@ -95,31 +95,6 @@ We're going to create three new files and copy/paste the code and data from the 
 
 You can use IDLE as your editor. Be sure to save the names of the files exactly as shown above, with the correct extensions (`.py`, `.csv`, `.txt`). You'll learn what csv means in a minute if you don't know already, but just follow the instructions for now.
 
-### Step 0d: Copying files using cp or scp
-
-**If you copied the files using the method in Step0c, SKIP AHEAD TO STEP 1. Step0d is not set up for you yet.**
-
-The next step depends on whether you are working on CSIL, or your own machine, although, again, for this lab it is highly recommended that you work on CSIL. Even if you are working on your own machine, it will be better if you use your machine to connect to CSIL and work there.
-
-You are going to copy some files from my directory *~pconrad/public\_html/cs8/14S/labs/lab06/code* into your lab06 directory.
-
-### On CSIL
-
-The following Unix command will do that on CSIL directly:
-
-    cp ~pconrad/public_html/cs8/14S/labs/lab06/code/* ~/cs20/lab06
-
-Note that the \* means "copy everything that matches" from this directory.
-
-### If you are using scp
-
-SCP stands for Secure Copy, and it is how you will copy files if you are working on your own machine. So, if you are using scp at the command line, use this command. Note the backslash in front of the \*, which is necessary to make sure the \* is interpreted on the remote machine, not the local machine.
-
-    scp yourusername@csil.cs.ucsb.edu:/cs/faculty/pconrad/public_html/cs8/14S/labs/lab06/code/\* ~/cs20/lab06
-
-If using a GUI for scp (e.g. WinSCP, Fetch, Filezilla), then you need to connect to csil.cs.ucsb.edu, and navigate in the "remote" window to */cs/faculty/pconrad/public\_html/cs8/14S/labs/lab06/code* and copy everything from there into your lab06 directory by dragging.
-
-You can also go the web page <http://www.cs.ucsb.edu/~pconrad/cs8/14S/labs/lab06/code> and do a "save as" on each individual file, but that is sort of tedious.
 
 Step 1: Learning how to make simple web pages by hand
 -----------------------------------------------------
