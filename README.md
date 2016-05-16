@@ -1146,12 +1146,16 @@ We are NOT using submit.cs in this case to test our code or submit.
 The only thing you need to do to submit is to go on Gauchospace, and put in the name of the repo where we can find your code and your web page.
 
 
-Go to the forum on Gauchospace marked "lab06 submission".
+Go to the assignment on Gauchospace marked "lab06 submission".
 
-Make a forum post, and in the post, put links to:
+Here's a link: https://gauchospace.ucsb.edu/courses/mod/assign/view.php?id=594997
+
+In the place where you can submit text, please type in:
 
 * (1) Your github repo for lab06 
 * (2) The web pages you made, i.e. https://www.cs.ucsb.edu/~yourusername/cs20
+
+If you can figure out how to do so, it is helpful if you can make the URL's clickable links. This requires using the "link" icon in the edit bar, selecting the URL, and then copying/pasting it into the box for the link target.  (If you can't figure it out, no worries.)
 
 Once you've done that, that's a sign that you are ready for your lab06 to be
 "graded", so to speak.
