@@ -345,12 +345,10 @@ or review the notes from this lecture regarding lists. [S16:Lectures:04.07](http
 
 ### Step 2b: Learning about Named Tuples
 
-Named Tuples are described in the textbook Section 5.1 but for further reading you can look at:
+You'll next need to read about named tuples.  Conrad will go over these in lecture on Thu 05/19, but you are encouraged to read about them and explore them here:
 
 -   This [tutorial on Named Tuples](https://foo.cs.ucsb.edu/8wiki/index.php/Python:_Named_Tuples) linked earlier in the lab as well
--   The sample code from these two CS8 Lectures: [F13:Lectures:11.05](https://foo.cs.ucsb.edu/8wiki/index.php/F13:Lectures:11.05), [S14:Lectures:05.07](https://foo.cs.ucsb.edu/8wiki/index.php/S14:Lectures:05.07)
-
-@@@@@@@@@@@@ UPDATE THIS WITH LINKS FROM THIS QUARTER'S LECTURES @@@@@@@@@@@@@@@
+-   The sample code from these two CS8 Lectures shows some additional examples: [F13:Lectures:11.05](https://foo.cs.ucsb.edu/8wiki/index.php/F13:Lectures:11.05), [S14:Lectures:05.07](https://foo.cs.ucsb.edu/8wiki/index.php/S14:Lectures:05.07)
 
 Step 3: Creating data files
 ---------------------------
@@ -413,7 +411,7 @@ The most important part of this is the last line: "No such file or directory: 's
 
 What Python is telling us is that it can't find this file. This may be because you didn't name it properly, or it may be because Python is not looking in the right place for it.
 
-If you are on Mac or Windows, you may need to concatenate a directory with your filename, like this, on Mac:
+You are encouraged to do this lab by ssh'ing in to CSIL--but if, instead, you are working directly on your own machine that runs Mac or Windows, you may need to concatenate a directory with your filename, like this, on Mac:
 
     >>> where = '/Users/Bob/cs20/lab06/'
     >>> infile = open(where + 'students.txt', 'r')
@@ -423,7 +421,7 @@ or like this on Windows:
     >>> where = 'c:/cs20/lab06/'
     >>> infile = open(where + 'students.txt', 'r')
 
-There is nothing special about the variable name where—you could call it myDir or whatever name you like. We are just defining a string variable that we are adding in front of the filename to tell Python where to find it.
+There is nothing special about the variable name `where`—you could call it `myDir` or whatever name you like. We are just defining a string variable that we are adding in front of the filename to tell Python where to find it.
 
 What you put after `where =` will depend on where you created your lab06 directory, and will depend on whether you are on working on Windows XP, Windows Vista, Mac, or Linux.
 
@@ -956,15 +954,7 @@ Now, we have both an input file and an output file to work with.
 The first thing we do is write the "header" to the HTML output file.
 
 Review what we did in step 1 with creating web pages to remind yourself about the structure of an HTML file (
-
-<html>
-,
-
-<head>
-,
-
-<body>
-, etc.)
+`<html>`, `<head>`,`<body>`, etc.)
 
 This is done via these lines:
 
