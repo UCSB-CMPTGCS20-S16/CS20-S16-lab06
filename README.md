@@ -71,12 +71,11 @@ cd into your ~/github directory then use "git clone" to clone your repo.  (If yo
 
 cd into your repository folder (i.e. ~/github/CS20-S16-lab06 )
 
-Create a `~/github/CS20-S16-lab06` directory, and start a new file in it called `lab06Funcs.py`, using either emacs or idle as your editor.
+Now open up IDLE and start a new file Python folder in this file called `lab06Funcs.py`.
 
 NOTE WELL:
 
--   You may use emacs no matter how you connect.
--   If you want to use IDLE, then you either need
+-   If you want to use IDLE when connecting to CSIL via ssh, then you either need
     -   On Windows: MobaXTerm, or PuTTY + XMing
     -   On Mac: ssh -X + XQuartz
     -   On Linux: you are probably good to go with just ssh -X
